@@ -1,0 +1,10 @@
+<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl plugin="credentials@2.6.1">
+  <scope>GLOBAL</scope>
+  <id>git</id>
+  <description></description>
+  <username>ybudnyi</username>
+  <password>
+    < Put Here Your GitHub Token />
+  </password>
+  <usernameSecret>false</usernameSecret>
+</com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
