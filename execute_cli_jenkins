@@ -1,7 +1,7 @@
 java -jar `pwd`/jenkins-cli.jar -s http://${jenkins_endpoint}:8080 who-am-i
 
-java -jar jenkins-cli.jar -s http://35.225.0.2:8080/ -webSocket get-credentials-as-xml system::system::jenkins _ github > github.xml
-java -jar jenkins-cli.jar -s http://35.225.0.2:8080/ create-credentials-by-xml  system::system::jenkins _ < github.xml
+java -jar jenkins-cli.jar -s http://${jenkins_endpoint}/ -webSocket get-credentials-as-xml system::system::jenkins _ github > github.xml
+java -jar jenkins-cli.jar -s http://${jenkins_endpoint}/ create-credentials-by-xml  system::system::jenkins _ < github.xml
 
-java -jar jenkins-cli.jar -s http://35.225.0.2:8080/ -webSocket get-job kubernetes > job_jenkins_k8s.xml
-java -jar jenkins-cli.jar -s http://35.225.0.2:8080/ -webSocket create-job test_k8s < job_jenkins_k8s.xml
+java -jar jenkins-cli.jar -s http://${jenkins_endpoint}/ -webSocket get-job kubernetes > job_jenkins_k8s.xml
+java -jar jenkins-cli.jar -s http://${jenkins_endpoint}/ -webSocket create-job test_k8s < job_jenkins_k8s.xml
